@@ -273,10 +273,6 @@
         </div>
     </div>
 
-    <audio id="birthdaySong"
-        src="https://github.com/Baque2005/Organizador/raw/refs/heads/master/As%20The%20World%20Caves%20In%20-%20Matt%20Maltese%20(Cover%20by%20Sarah%20Cothran).mp3"
-        preload="auto"></audio>
-
     <script>
         (function () {
             const prefersReducedMotion = window.matchMedia(
@@ -285,7 +281,6 @@
 
             const mainGift = document.getElementById("mainGift");
             const giftModal = document.getElementById("giftModal");
-            const birthdaySong = document.getElementById("birthdaySong");
             const closeTargets = giftModal.querySelectorAll('[data-close="true"]');
             let lastFocusedEl = null;
 
@@ -295,15 +290,7 @@
                 const closeBtn = giftModal.querySelector(".modal__close");
                 closeBtn && closeBtn.focus();
 
-                if (birthdaySong) {
-                    try {
-                        birthdaySong.currentTime = 0;
-                    } catch {
-                        // ignore
-                    }
-                    const p = birthdaySong.play();
-                    if (p && typeof p.catch === "function") p.catch(() => { });
-                }
+    
             }
 
             function closeModal() {
